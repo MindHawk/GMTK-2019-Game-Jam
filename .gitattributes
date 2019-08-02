@@ -1,0 +1,4 @@
+# Scene, prefab and ScriptableObject files
+*.unity binary
+*.prefab binary
+*.asset binary
