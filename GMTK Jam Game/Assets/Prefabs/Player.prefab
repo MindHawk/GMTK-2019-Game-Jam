@@ -430,7 +430,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   power: 0
   maximumPower: 100
-  actionsLockedToOne: 0
+  actionsLockedToOne: 1
   currentAction: 0
   switchingToAction: 0
   timeStartedSwitchingAt: 0
@@ -703,5 +703,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _projectile: {fileID: 5438837827275631640, guid: c75fc5d9ee36904439cbfa97bc9bb355,
     type: 3}
-  isActive: 1
+  isPlayerWeapon: 1
   delayBetweenShots: 0.5

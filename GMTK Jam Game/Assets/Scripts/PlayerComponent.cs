@@ -7,7 +7,7 @@ public class PlayerComponent : MonoBehaviour
     public float power;
     public float maximumPower = 100f;
     
-    public bool actionsLockedToOne = false;
+    public bool actionsLockedToOne = true;
     public Action currentAction;
     public Action switchingToAction;
     public float timeStartedSwitchingAt;
@@ -24,6 +24,5 @@ public class PlayerComponent : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(power);
     }
 }

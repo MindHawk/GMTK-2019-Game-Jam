@@ -20,8 +20,31 @@ public class InputComponent : MonoBehaviour
 
     void Update()
     {
+        Debug.Log(_player.power);
         if (_player.actionsLockedToOne)
         {
+            if (Input.GetKeyDown("1"))
+            {
+                _player.currentAction = Action.Switching;
+                _player.switchingToAction = Action.Charging;
+            }
+            if (Input.GetKeyDown("2"))
+            {
+                _player.currentAction = Action.Switching;
+                _player.switchingToAction = Action.Moving;
+            }
+            if (Input.GetKeyDown("3"))
+            {
+                _player.currentAction = Action.Switching;
+                _player.switchingToAction = Action.Attacking;
+            }
+            if (Input.GetKeyDown("4"))
+            {
+                _player.currentAction = Action.Switching;
+                _player.switchingToAction = Action.Shielding;
+            }
+
+
             switch (_player.currentAction)
             {
                 case Action.Switching:
@@ -66,7 +89,14 @@ public class InputComponent : MonoBehaviour
 
     void UsePower()
     {
-        _player.power -= _player.powerDrainedPerSystemPerSecond;
+        if (_player.power > 0)
+        {
+            _player.power -= _player.powerDrainedPerSystemPerSecond * Time.deltaTime;
+        }
+        else if (_player.power < 0)
+        {
+            _player.power = 0;
+        }
     }
 
     void MoveAction()
@@ -85,9 +115,9 @@ public class InputComponent : MonoBehaviour
         if (Input.GetAxis("Fire1") > 0)
         {
             _weapon.FireProjectile();
+            UsePower();
         }
 
-        UsePower();
     }
 
     void ShieldAction()

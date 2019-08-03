@@ -18,27 +18,27 @@ public class PowerDisplayController : MonoBehaviour
     void Update()
     {
         float _power = playerComponent.power;
-        if (_power == 100)
+        if (_power > 90)
         {
             _image.sprite = sprites[0];
         }
-        else if (_power < 100 && _power > 80)
+        else if (_power < 90 && _power > 75)
         {
             _image.sprite = sprites[1];
         }
-        else if (_power < 80 && _power > 60)
+        else if (_power < 75 && _power > 60)
         {
             _image.sprite = sprites[2];
         }
-        else if (_power < 60 && _power > 40)
+        else if (_power < 60 && _power > 45)
         {
             _image.sprite = sprites[3];
         }
-        else if (_power < 40 && _power > 20)
+        else if (_power < 45 && _power > 30)
         {
             _image.sprite = sprites[4];
         }
-        else if (_power < 20)
+        else if (_power < 30)
         {
             _image.sprite = sprites[5];
         }
