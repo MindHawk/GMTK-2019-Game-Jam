@@ -5,31 +5,29 @@ using UnityEngine;
 
 public class InputComponent : MonoBehaviour
 {
-    private MovementComponent move;
+    private MovementComponent _move;
+    private PlayerComponent _player;
     
-    public bool actionsLockedToOne = false;
-    public Action currentAction;
-    public Action switchingToAction;
-    public float timeSwitchedAt;
-    public float switchDelay;
+
         
     // Start is called before the first frame update
     void Start()
     {
-        move = GetComponent<MovementComponent>();
+        _move = GetComponent<MovementComponent>();
+        _player = GetComponent<PlayerComponent>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (actionsLockedToOne)
+        if (_player.actionsLockedToOne)
         {
-            switch (currentAction)
+            switch (_player.currentAction)
             {
                 case Action.Switching:
-                    if (Time.time - timeSwitchedAt > switchDelay)
+                    if (Time.time - _player.timeStartedSwitchingAt > _player.switchDelay)
                     {
-                        currentAction = switchingToAction;
+                        _player.currentAction = _player.switchingToAction;
                     }
                     break;
                 case Action.Charging:
@@ -50,43 +48,48 @@ public class InputComponent : MonoBehaviour
         }
         else
         {
-            ChargeAction();
             MoveAction();
             AttackAction();
             ShieldAction();
+            ChargeAction();
         }
     }
 
     void ChargeAction()
     {
-        
+        _player.power += Time.deltaTime * _player.powerChargedPerSecond;
+        if (_player.power > _player.maximumPower)
+        {
+            _player.power = _player.maximumPower;
+        }
+    }
+
+    void UsePower()
+    {
+        _player.power -= _player.powerDrainedPerSystemPerSecond;
     }
 
     void MoveAction()
     {
+        UsePower();
         float verticalAxis = Input.GetAxis("Vertical");
         float horizontalAxis = Input.GetAxis("Horizontal");
         if (verticalAxis != 0 || horizontalAxis != 0)
         {
-            move.Move(horizontalAxis, verticalAxis);
+            _move.Move(horizontalAxis, verticalAxis);
         }
     }
 
     void AttackAction()
     {
-        
+        UsePower();
     }
 
     void ShieldAction()
     {
-        
+        UsePower();
     }
 
-    void CheckSwitching()
-    {
-        
-    } 
-    
     void CheckCharging()
     {
         
