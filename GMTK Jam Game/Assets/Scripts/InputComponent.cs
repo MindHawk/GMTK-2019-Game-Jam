@@ -33,48 +33,31 @@ public class InputComponent : MonoBehaviour
         {
             if (Input.GetKeyDown("1"))
             {
+                _player.timeStartedSwitchingAt = Time.time;
                 _player.currentAction = Action.Switching;
                 _player.switchingToAction = Action.Charging;
-                _weapon.isActiveWeapon = false;
-                foreach (VisualThrustComponent thrustComponent in _thrusters)
-                {
-                    thrustComponent.isActiveModule = false;
-                }
-                _shield.isActiveWeapon = false;
+                DisableEverything();
             }
-            if (Input.GetKeyDown("2"))
+            if (Input.GetKeyDown("2") & _player.power > 5)
             {
+                _player.timeStartedSwitchingAt = Time.time;
                 _player.currentAction = Action.Switching;
                 _player.switchingToAction = Action.Moving;
-                _weapon.isActiveWeapon = false;
-                foreach (VisualThrustComponent thrustComponent in _thrusters)
-                {
-                    thrustComponent.isActiveModule = true;
-                }
-                _shield.isActiveWeapon = false;
+                DisableEverything();
             }
-            if (Input.GetKeyDown("3"))
+            if (Input.GetKeyDown("3") & _player.power > 5)
             {
+                _player.timeStartedSwitchingAt = Time.time;
                 _player.currentAction = Action.Switching;
                 _player.switchingToAction = Action.Attacking;
-                _weapon.isActiveWeapon = true;
-                foreach (VisualThrustComponent thrustComponent in _thrusters)
-                {
-                    thrustComponent.isActiveModule = false;
-                }
-                _shield.isActiveWeapon = false;
+                DisableEverything();
             }
-            if (Input.GetKeyDown("4"))
+            if (Input.GetKeyDown("4") & _player.power > 5)
             {
+                _player.timeStartedSwitchingAt = Time.time;
                 _player.currentAction = Action.Switching;
                 _player.switchingToAction = Action.Shielding;
-                _weapon.isActiveWeapon = false;
-                foreach (VisualThrustComponent thrustComponent in _thrusters)
-                {
-                    thrustComponent.isActiveModule = false;
-                }
-                _shield.isActiveWeapon = true;
-
+                DisableEverything();
             }
 
 
@@ -84,6 +67,27 @@ public class InputComponent : MonoBehaviour
                     if (Time.time - _player.timeStartedSwitchingAt > _player.switchDelay)
                     {
                         _player.currentAction = _player.switchingToAction;
+                        switch (_player.currentAction)
+                        {
+                            case Action.Switching:
+                                break;
+                            case Action.Charging:
+                                break;
+                            case Action.Moving:
+                                foreach (VisualThrustComponent thrustComponent in _thrusters)
+                                {
+                                    thrustComponent.isActiveModule = true;
+                                }
+                                break;
+                            case Action.Attacking:
+                                _weapon.isActiveWeapon = true;
+                                break;
+                            case Action.Shielding:
+                                _shield.isActiveWeapon = true;
+                                break;
+                            default:
+                                throw new ArgumentOutOfRangeException();
+                        }
                     }
                     break;
                 case Action.Charging:
@@ -111,6 +115,17 @@ public class InputComponent : MonoBehaviour
         }
     }
 
+    private void DisableEverything()
+    {
+        _weapon.isActiveWeapon = false;
+        foreach (VisualThrustComponent thrustComponent in _thrusters)
+        {
+            thrustComponent.isActiveModule = false;
+        }
+
+        _shield.isActiveWeapon = false;
+    }
+
     void ChargeAction()
     {
         _player.power += Time.deltaTime * _player.powerChargedPerSecond;
@@ -124,11 +139,15 @@ public class InputComponent : MonoBehaviour
     {
         if (_player.power > 0)
         {
-            _player.power -= _player.powerDrainedPerSystemPerSecond * Time.deltaTime;
+            _player.power -= Time.deltaTime * _player.powerDrainedPerSystemPerSecond ;
         }
         else if (_player.power < 0)
         {
             _player.power = 0;
+            _player.timeStartedSwitchingAt = Time.time;
+            _player.currentAction = Action.Switching;
+            _player.switchingToAction = Action.Charging;
+            DisableEverything();
         }
     }
 

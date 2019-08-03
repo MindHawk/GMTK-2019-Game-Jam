@@ -10,9 +10,9 @@ public class BackgroundComponent : MonoBehaviour
     void Update()
     {
         transform.position += backgroundSpeed * Time.deltaTime * Vector3.left;
-        if (transform.position.x < -18)
+        if (transform.position.x < - 14)
         {
-            transform.position = new Vector3();
-        }
+            transform.position = new Vector3(-4, 0, 0);
+        } 
     }
 }
