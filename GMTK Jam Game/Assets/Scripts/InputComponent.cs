@@ -11,7 +11,6 @@ public class InputComponent : MonoBehaviour
     
 
         
-    // Start is called before the first frame update
     void Start()
     {
         _move = GetComponent<MovementComponent>();
@@ -19,7 +18,6 @@ public class InputComponent : MonoBehaviour
         _weapon = GetComponentInChildren<WeaponComponent>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (_player.actionsLockedToOne)

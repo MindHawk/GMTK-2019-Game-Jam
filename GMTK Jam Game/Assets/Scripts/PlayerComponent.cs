@@ -16,15 +16,14 @@ public class PlayerComponent : MonoBehaviour
     public float powerChargedPerSecond = 5f;
     public float powerDrainedPerSystemPerSecond = 1.5f;
     
-    // Start is called before the first frame update
     void Start()
     {
         currentAction = Action.Moving;
+        power = maximumPower;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        Debug.Log(power);
     }
 }
