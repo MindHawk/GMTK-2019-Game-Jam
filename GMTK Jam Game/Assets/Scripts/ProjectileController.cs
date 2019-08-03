@@ -6,6 +6,7 @@ public class ProjectileController : MonoBehaviour
 {
     [SerializeField] float _lifeTime;
     [SerializeField] float _speed;
+    public bool isEnemyBullet;
     void Start()
     {
         transform.parent = null;

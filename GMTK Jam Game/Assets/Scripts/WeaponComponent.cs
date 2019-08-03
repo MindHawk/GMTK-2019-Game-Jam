@@ -8,7 +8,7 @@ public class WeaponComponent : MonoBehaviour
 
     private float _lastFiredAt = 0;
     
-    public bool isActive = true;
+    public bool isPlayerWeapon = true;
     public float delayBetweenShots = 0.5f;
 
     void Start()
@@ -19,7 +19,7 @@ public class WeaponComponent : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isActive)
+        if (isPlayerWeapon)
         {
             Vector3 mousePos = Input.mousePosition;
             mousePos.z = 1f;
