@@ -19,7 +19,7 @@ public class PlayerComponent : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        currentAction = Action.Moving;
     }
 
     // Update is called once per frame
