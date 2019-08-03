@@ -82,6 +82,12 @@ public class InputComponent : MonoBehaviour
 
     void AttackAction()
     {
+        WeaponComponent weapon = GetComponentInChildren<WeaponComponent>();
+        if (Input.GetAxis("Fire1") > 0)
+        {
+            weapon.FireProjectile();
+        }
+
         UsePower();
     }
 

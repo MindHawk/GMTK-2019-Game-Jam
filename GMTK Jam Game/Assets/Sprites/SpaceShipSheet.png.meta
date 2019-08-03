@@ -1,0 +1,557 @@
+fileFormatVersion: 2
+guid: ab8afb2f151a1d640bc3cc3169bd5468
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4016932750443874536
+    second: SpaceShipSheet_0
+  - first:
+      213: -8431311125850600716
+    second: SpaceShipSheet_1
+  - first:
+      213: -7502203239868873953
+    second: SpaceShipSheet_2
+  - first:
+      213: -4464986691443644579
+    second: SpaceShipSheet_3
+  - first:
+      213: 9063878495153351724
+    second: SpaceShipSheet_4
+  - first:
+      213: 6599902372397915830
+    second: SpaceShipSheet_5
+  - first:
+      213: -194763466933427915
+    second: SpaceShipSheet_6
+  - first:
+      213: 2285895698180801148
+    second: SpaceShipSheet_7
+  - first:
+      213: -9087303929550630369
+    second: SpaceShipSheet_8
+  - first:
+      213: -6407326996394424619
+    second: SpaceShipSheet_9
+  - first:
+      213: 7001558246402296155
+    second: SpaceShipSheet_10
+  - first:
+      213: 599455969246256004
+    second: SpaceShipSheet_11
+  - first:
+      213: -1609111641991612731
+    second: SpaceShipSheet_12
+  - first:
+      213: -602703610950702992
+    second: SpaceShipSheet_13
+  - first:
+      213: 88265855544390296
+    second: SpaceShipSheet_14
+  - first:
+      213: -3317360694658800680
+    second: SpaceShipSheet_15
+  - first:
+      213: 4774474903108093678
+    second: SpaceShipSheet_16
+  - first:
+      213: 8159342312635514433
+    second: SpaceShipSheet_17
+  - first:
+      213: 3091473235701476567
+    second: SpaceShipSheet_18
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SpaceShipSheet_0
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 855
+        width: 16
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01ec458a11a462245aa72d66060ce434
+      internalID: -4016932750443874536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShipSheet_1
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 871
+        width: 109
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a64f18c34624d8e47b05542670fdbd8c
+      internalID: -8431311125850600716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShipSheet_2
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 597
+        width: 256
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e36a79f822d30ca4a9021eef07c494d8
+      internalID: -7502203239868873953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShipSheet_3
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 573
+        width: 92
+        height: 245
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e51c4b891d9e4445acf6f2e50e6cfca
+      internalID: -4464986691443644579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShipSheet_4
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 528
+        width: 341
+        height: 341
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4f53a57408f51f4d98459c760b37f0a
+      internalID: 9063878495153351724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShipSheet_5
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 499
+        width: 79
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f88ce107e98647e4f84aa0cb5a646102
+      internalID: 6599902372397915830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShipSheet_6
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 423
+        width: 33
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 437cd17d27dad1c469ef22a5b9b17110
+      internalID: -194763466933427915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShipSheet_7
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 482
+        width: 23
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3da3ab3dca398174dae8956c2258eee2
+      internalID: 2285895698180801148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShipSheet_8
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 496
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6f60521d5edbb848ab0b702346fcc9f
+      internalID: -9087303929550630369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShipSheet_9
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 499
+        width: 33
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13a637e20d6bd094798deec57a372eb5
+      internalID: -6407326996394424619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShipSheet_10
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 466
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c84351476cdebd40acd9657cd2d9fc6
+      internalID: 7001558246402296155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShipSheet_11
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 460
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b7e95c69d60e2742ad812680eaddb19
+      internalID: 599455969246256004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShipSheet_12
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 446
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06a0671e1e0a0a8459bfbd4dde3e3347
+      internalID: -1609111641991612731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShipSheet_13
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 89
+        width: 256
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93a1421e3bfac7c459c5b85b58508f4a
+      internalID: -602703610950702992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShipSheet_14
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 300
+        width: 36
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44960e0f35b17bf43ade99743e012697
+      internalID: 88265855544390296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShipSheet_15
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 296
+        width: 36
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d66120489328444087b5a3757f0116b
+      internalID: -3317360694658800680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShipSheet_16
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 308
+        width: 114
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e8845b487415f04489027dfa5334b0a
+      internalID: 4774474903108093678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShipSheet_17
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 302
+        width: 199
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4e96ac30c6da764f9beda6aa9447c70
+      internalID: 8159342312635514433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShipSheet_18
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 29
+        width: 92
+        height: 245
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0eaffe21ac9fed54fad867cdcf09ba98
+      internalID: 3091473235701476567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: b7ec4775af2f03346a84c7647c0a09db
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
