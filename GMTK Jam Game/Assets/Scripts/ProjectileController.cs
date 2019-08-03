@@ -6,16 +6,16 @@ public class ProjectileController : MonoBehaviour
 {
     [SerializeField] float _lifeTime;
     [SerializeField] float _speed;
-    private Transform _transform;
     void Start()
     {
-        _transform = GetComponent<Transform>();
-        _transform.parent = null;
+        transform.parent = null;
     }
 
     // Update is called once per frame
     void Update()
     {
+        var trans = transform;
+        trans.position += trans.rotation * (Time.deltaTime * _speed * Vector3.up);
         if(_lifeTime > 0)
         {
             _lifeTime -= Time.deltaTime;

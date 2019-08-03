@@ -7,6 +7,7 @@ public class InputComponent : MonoBehaviour
 {
     private MovementComponent _move;
     private PlayerComponent _player;
+    private WeaponComponent _weapon;
     
 
         
@@ -15,6 +16,7 @@ public class InputComponent : MonoBehaviour
     {
         _move = GetComponent<MovementComponent>();
         _player = GetComponent<PlayerComponent>();
+        _weapon = GetComponentInChildren<WeaponComponent>();
     }
 
     // Update is called once per frame
@@ -82,10 +84,9 @@ public class InputComponent : MonoBehaviour
 
     void AttackAction()
     {
-        WeaponComponent weapon = GetComponentInChildren<WeaponComponent>();
         if (Input.GetAxis("Fire1") > 0)
         {
-            weapon.FireProjectile();
+            _weapon.FireProjectile();
         }
 
         UsePower();
