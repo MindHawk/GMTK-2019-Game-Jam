@@ -10,9 +10,7 @@ public class InputComponent : MonoBehaviour
     private WeaponComponent _weapon;
     private ShieldController _shield;
     private List<VisualThrustComponent> _thrusters;
-    
 
-        
     void Start()
     {
         _move = GetComponent<MovementComponent>();
@@ -33,31 +31,19 @@ public class InputComponent : MonoBehaviour
         {
             if (Input.GetKeyDown("1"))
             {
-                _player.timeStartedSwitchingAt = Time.time;
-                _player.currentAction = Action.Switching;
-                _player.switchingToAction = Action.Charging;
-                DisableEverything();
+                SwitchToCharge();
             }
-            if (Input.GetKeyDown("2") & _player.power > 5)
+            if (Input.GetKeyDown("2"))
             {
-                _player.timeStartedSwitchingAt = Time.time;
-                _player.currentAction = Action.Switching;
-                _player.switchingToAction = Action.Moving;
-                DisableEverything();
+                SwitchToMove();
             }
-            if (Input.GetKeyDown("3") & _player.power > 5)
+            if (Input.GetKeyDown("3"))
             {
-                _player.timeStartedSwitchingAt = Time.time;
-                _player.currentAction = Action.Switching;
-                _player.switchingToAction = Action.Attacking;
-                DisableEverything();
+                SwitchToAttack();
             }
-            if (Input.GetKeyDown("4") & _player.power > 5)
+            if (Input.GetKeyDown("4"))
             {
-                _player.timeStartedSwitchingAt = Time.time;
-                _player.currentAction = Action.Switching;
-                _player.switchingToAction = Action.Shielding;
-                DisableEverything();
+                SwitchToShield();
             }
 
 
@@ -144,10 +130,7 @@ public class InputComponent : MonoBehaviour
         else if (_player.power < 0)
         {
             _player.power = 0;
-            _player.timeStartedSwitchingAt = Time.time;
-            _player.currentAction = Action.Switching;
-            _player.switchingToAction = Action.Charging;
-            DisableEverything();
+            SwitchToCharge();
         }
     }
 
@@ -177,23 +160,35 @@ public class InputComponent : MonoBehaviour
         UsePower();
     }
 
-    void CheckCharging()
+    public void SwitchToCharge()
     {
-        
+        _player.timeStartedSwitchingAt = Time.time;
+        _player.currentAction = Action.Switching;
+        _player.switchingToAction = Action.Charging;
+        DisableEverything();
     }
 
-    void CheckMoving()
+    public void SwitchToMove()
     {
-        
+        _player.timeStartedSwitchingAt = Time.time;
+        _player.currentAction = Action.Switching;
+        _player.switchingToAction = Action.Moving;
+        DisableEverything();
     }
 
-    void CheckAttacking()
+    public void SwitchToAttack()
     {
-        
+        _player.timeStartedSwitchingAt = Time.time;
+        _player.currentAction = Action.Switching;
+        _player.switchingToAction = Action.Attacking;
+        DisableEverything();
     }
 
-    void CheckShielding()
+    public void SwitchToShield()
     {
-        
+        _player.timeStartedSwitchingAt = Time.time;
+        _player.currentAction = Action.Switching;
+        _player.switchingToAction = Action.Shielding;
+        DisableEverything();
     }
 }
