@@ -50,7 +50,19 @@ public class ProjectileController : MonoBehaviour
                 //If it's an enemy projectile, destroy this?
             }
         }
-        
-        throw new NotImplementedException();)
+        else
+        {
+            AIComponent AIShip = other.GetComponent<AIComponent>();
+            if (AIShip != null)
+            { //We've hit an enemy vessel!
+                
+            }
+            
+            ProjectileController projectile = other.GetComponent<ProjectileController>();
+            if (projectile != null)
+            { //We've collided onto a projectile! 
+                //If it's an enemy projectile, destroy this?
+            }
+        }
     }
 }
