@@ -8,6 +8,8 @@ public class InputComponent : MonoBehaviour
     private MovementComponent _move;
     private PlayerComponent _player;
     private WeaponComponent _weapon;
+    private ShieldController _shield;
+    private List<VisualThrustComponent> _thrusters;
     
 
         
@@ -16,32 +18,63 @@ public class InputComponent : MonoBehaviour
         _move = GetComponent<MovementComponent>();
         _player = GetComponent<PlayerComponent>();
         _weapon = GetComponentInChildren<WeaponComponent>();
+        _shield = GetComponentInChildren<ShieldController>();
+
+        _thrusters = new List<VisualThrustComponent>();
+        foreach (VisualThrustComponent thrustComponent in GetComponentsInChildren<VisualThrustComponent>())
+        {
+            _thrusters.Add(thrustComponent);
+        } 
     }
 
     void Update()
     {
-        Debug.Log(_player.power);
         if (_player.actionsLockedToOne)
         {
             if (Input.GetKeyDown("1"))
             {
                 _player.currentAction = Action.Switching;
                 _player.switchingToAction = Action.Charging;
+                _weapon.isActiveWeapon = false;
+                foreach (VisualThrustComponent thrustComponent in _thrusters)
+                {
+                    thrustComponent.isActiveModule = false;
+                }
+                _shield.isActiveWeapon = false;
             }
             if (Input.GetKeyDown("2"))
             {
                 _player.currentAction = Action.Switching;
                 _player.switchingToAction = Action.Moving;
+                _weapon.isActiveWeapon = false;
+                foreach (VisualThrustComponent thrustComponent in _thrusters)
+                {
+                    thrustComponent.isActiveModule = true;
+                }
+                _shield.isActiveWeapon = false;
             }
             if (Input.GetKeyDown("3"))
             {
                 _player.currentAction = Action.Switching;
                 _player.switchingToAction = Action.Attacking;
+                _weapon.isActiveWeapon = true;
+                foreach (VisualThrustComponent thrustComponent in _thrusters)
+                {
+                    thrustComponent.isActiveModule = false;
+                }
+                _shield.isActiveWeapon = false;
             }
             if (Input.GetKeyDown("4"))
             {
                 _player.currentAction = Action.Switching;
                 _player.switchingToAction = Action.Shielding;
+                _weapon.isActiveWeapon = false;
+                foreach (VisualThrustComponent thrustComponent in _thrusters)
+                {
+                    thrustComponent.isActiveModule = false;
+                }
+                _shield.isActiveWeapon = true;
+
             }
 
 

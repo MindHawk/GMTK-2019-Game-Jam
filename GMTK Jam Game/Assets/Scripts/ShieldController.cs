@@ -2,15 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WeaponComponent : MonoBehaviour
+public class ShieldController : MonoBehaviour
 {
-    [SerializeField] private GameObject _projectile;
-
-    private float _lastFiredAt = 0;
-    
     public bool isPlayerWeapon = true;
     public bool isActiveWeapon = false;
-    public float delayBetweenShots = 0.5f;
 
     void Start()
     {
@@ -30,15 +25,6 @@ public class WeaponComponent : MonoBehaviour
 
             float angle = Mathf.Atan2(mousePos.y, mousePos.x) * Mathf.Rad2Deg;
             transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle - 90));
-        }
-    }
-
-    public void FireProjectile()
-    {
-        if (_lastFiredAt + delayBetweenShots < Time.time)
-        {
-            _lastFiredAt = Time.time;
-            Instantiate(_projectile, transform);
         }
     }
 }
