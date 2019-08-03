@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -25,5 +26,31 @@ public class ProjectileController : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (isEnemyBullet)
+        {
+            PlayerComponent player = other.GetComponent<PlayerComponent>();
+            if (player != null)
+            { //We're firing on the enemy ship!
+                
+            }
+
+            ShieldComponent shield = other.GetComponent<ShieldComponent>();
+            if (shield != null)
+            { //We're firing on the enemy shield!
+                
+            }
+
+            ProjectileController projectile = other.GetComponent<ProjectileController>();
+            if (projectile != null)
+            { //We've collided onto a projectile! 
+                //If it's an enemy projectile, destroy this?
+            }
+        }
+        
+        throw new NotImplementedException();)
     }
 }
