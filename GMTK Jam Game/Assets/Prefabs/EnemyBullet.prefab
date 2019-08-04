@@ -96,7 +96,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifeTime: 10
-  speed: 2
+  speed: 3
   damage: 1
   isEnemyBullet: 1
 --- !u!61 &7549727591832417908

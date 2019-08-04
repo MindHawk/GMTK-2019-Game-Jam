@@ -7,17 +7,26 @@ public class EnemySpawning : MonoBehaviour
     [SerializeField] List<GameObject> spawnPoints;
     [SerializeField] List<GameObject> spawnEnemies;
     [SerializeField] private float spawnInterval;
+    [SerializeField] private float playerScoreTarget = 1000;
+    [SerializeField] private float playerScoreIntervals = 1000;
+    [SerializeField] private PlayerComponent player;
 
     void Start()
     {
-        SpawnEnemy();
+        //SpawnEnemy();
         InvokeRepeating("SpawnEnemy", 1f, spawnInterval);
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        if (player.score >= playerScoreTarget)
+        {
+            spawnInterval -= 0.5f;
+            CancelInvoke();
+            InvokeRepeating("SpawnEnemy", 1f, spawnInterval);
+            playerScoreTarget += playerScoreIntervals;
+        }
     }
 
     void SpawnEnemy()
