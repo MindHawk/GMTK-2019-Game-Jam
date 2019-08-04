@@ -11,9 +11,11 @@ public class AIComponent : MonoBehaviour
     [SerializeField] private int _scoreValue = 100;
     [SerializeField] private GameObject _deathSound;
 
-    public AIType _aiType;
+    public AIType aiType;
 
-    private int x;
+    public float direction = 1;
+
+    private float _x;
     
     // Start is called before the first frame update
     void Start()
@@ -25,19 +27,18 @@ public class AIComponent : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        switch (_aiType)
+        switch (aiType)
         {
-            case AIType.SimpleUp:
-                _move.Move(0.2f, 1);
+            case AIType.Simple:
+                _move.Move(0.2f, direction);
                 break;
-            case AIType.SimpleDown:
-                _move.Move(0.2f, -1);
-                break;
-            case AIType.WavyUp:
-                _move.Move(x, 0);
-                
-                break;
-            case AIType.WavyDown:
+            case AIType.Wavy:
+                _move.Move(_x, direction);
+                _x += 3f * Time.deltaTime;
+                if (_x > 2)
+                {
+                    _x = -2;
+                }
                 break;
             default:
                 throw new ArgumentOutOfRangeException();
