@@ -45,7 +45,7 @@ public class AIComponent : MonoBehaviour
         
         _weapon.FireProjectile();
 
-        if (Math.Abs(transform.position.x) > 11 || Math.Abs(transform.position.y) > 7)
+        if (Math.Abs(transform.position.x) > 10.5f || Math.Abs(transform.position.y) > 6.5f)
         {
             Destroy(gameObject);
         }
