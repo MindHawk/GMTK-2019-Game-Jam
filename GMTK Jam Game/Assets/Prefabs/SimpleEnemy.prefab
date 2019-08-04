@@ -244,6 +244,8 @@ MonoBehaviour:
   _scoreValue: 100
   _deathSound: {fileID: 8668636636180240908, guid: d317115773edab243b2333a892dba445,
     type: 3}
+  _deathParticles: {fileID: 7682716225827244797, guid: 07cb5a6338e027449809fb4b48e41c0d,
+    type: 3}
   aiType: 0
   direction: 1
 --- !u!114 &8279136884219903460

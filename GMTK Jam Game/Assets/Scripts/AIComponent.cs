@@ -10,6 +10,7 @@ public class AIComponent : MonoBehaviour
     [SerializeField] private int _health = 3;
     [SerializeField] private int _scoreValue = 100;
     [SerializeField] private GameObject _deathSound;
+    [SerializeField] private GameObject _deathParticles;
 
     public AIType aiType;
 
@@ -31,6 +32,7 @@ public class AIComponent : MonoBehaviour
         {
             direction = 1;
         }
+
     }
 
     // Update is called once per frame
@@ -75,6 +77,9 @@ public class AIComponent : MonoBehaviour
     {
         if (_health <= 0)
         {
+            GameObject ParticleEmitter = Instantiate(_deathParticles, transform);
+            ParticleEmitter.transform.parent = null;
+
             GameObject SoundEmitter = Instantiate(_deathSound, transform, true);
             AudioSource audioSource = SoundEmitter.GetComponent<AudioSource>();
             audioSource.Play();

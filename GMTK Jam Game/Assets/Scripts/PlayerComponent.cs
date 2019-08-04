@@ -19,6 +19,7 @@ public class PlayerComponent : MonoBehaviour
 
     [SerializeField] private GameObject _deathSound;
     [SerializeField] private List<GameObject> RestartScreen;
+    [SerializeField] private GameObject _deathParticles;
     
     void Start()
     {
@@ -33,6 +34,9 @@ public class PlayerComponent : MonoBehaviour
 
     private void OnDestroy()
     {
+        GameObject ParticleEmitter = Instantiate(_deathParticles, transform);
+        ParticleEmitter.transform.parent = null;
+
         foreach (GameObject gameObject in RestartScreen)
         {
             gameObject.SetActive(true);
