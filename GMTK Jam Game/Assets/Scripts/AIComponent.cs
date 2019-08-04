@@ -11,6 +11,8 @@ public class AIComponent : MonoBehaviour
     [SerializeField] private int _scoreValue = 100;
 
     public AIType _aiType;
+
+    private int x;
     
     // Start is called before the first frame update
     void Start()
@@ -29,6 +31,12 @@ public class AIComponent : MonoBehaviour
                 break;
             case AIType.SimpleDown:
                 _move.Move(0.2f, -1);
+                break;
+            case AIType.WavyUp:
+                _move.Move(x, 0);
+                
+                break;
+            case AIType.WavyDown:
                 break;
             default:
                 throw new ArgumentOutOfRangeException();
