@@ -159,7 +159,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8279136884219903461}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 3.5, y: -5.5, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_Children:
   - {fileID: 2552870356185268708}
@@ -244,7 +244,8 @@ MonoBehaviour:
   _scoreValue: 100
   _deathSound: {fileID: 8668636636180240908, guid: d317115773edab243b2333a892dba445,
     type: 3}
-  _aiType: 0
+  aiType: 0
+  direction: 1
 --- !u!114 &8279136884219903460
 MonoBehaviour:
   m_ObjectHideFlags: 0

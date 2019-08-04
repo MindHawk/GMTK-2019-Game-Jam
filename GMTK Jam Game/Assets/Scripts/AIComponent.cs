@@ -22,6 +22,15 @@ public class AIComponent : MonoBehaviour
     {
         _move = GetComponent<MovementComponent>();
         _weapon = GetComponent<WeaponComponent>();
+
+        if(transform.position.y > 0)
+        {
+            direction = -1;
+        }
+        else if (transform.position.y < 0)
+        {
+            direction = 1;
+        }
     }
 
     // Update is called once per frame
