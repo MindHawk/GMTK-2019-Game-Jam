@@ -216,6 +216,7 @@ GameObject:
   - component: {fileID: 5874353215505838227}
   - component: {fileID: 170235944515432847}
   - component: {fileID: 1820188471}
+  - component: {fileID: 183723362868896047}
   m_Layer: 0
   m_Name: Shield_Barrier
   m_TagString: Untagged
@@ -312,6 +313,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.09, y: 0.36}
   m_EdgeRadius: 0
+--- !u!50 &183723362868896047
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2351624176648100695}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &3311061795307003205
 GameObject:
   m_ObjectHideFlags: 0
@@ -515,6 +537,7 @@ GameObject:
   - component: {fileID: 927865313473655042}
   - component: {fileID: 3682856866623688780}
   - component: {fileID: 2406073907283223137}
+  - component: {fileID: 3390323031418992224}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -531,7 +554,7 @@ Transform:
   m_GameObject: {fileID: 5792142914381856866}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 713280179593529694}
   - {fileID: 3428352552175622984}
@@ -652,6 +675,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2aeba88f06300724bb4df8a81a3713eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!50 &3390323031418992224
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5792142914381856866}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &6548670409570757923
 GameObject:
   m_ObjectHideFlags: 0

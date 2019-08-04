@@ -30,6 +30,7 @@ public class ProjectileController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log("Triggered");
         if (isEnemyBullet)
         {
             PlayerComponent player = other.GetComponent<PlayerComponent>();
@@ -64,5 +65,10 @@ public class ProjectileController : MonoBehaviour
                 //If it's an enemy projectile, destroy this?
             }
         }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Debug.Log("Collided");
     }
 }

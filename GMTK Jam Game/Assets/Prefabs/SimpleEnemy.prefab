@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 8279136884219903461}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 3.5, y: -5.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -124,6 +124,7 @@ MonoBehaviour:
   _projectile: {fileID: 5438837827275631640, guid: 497d6e1afcf4cbd499889f52dca21a8b,
     type: 3}
   isPlayerWeapon: 0
+  isActiveWeapon: 0
   delayBetweenShots: 1.5
 --- !u!58 &-5916703434256190410
 CircleCollider2D:
@@ -135,7 +136,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
