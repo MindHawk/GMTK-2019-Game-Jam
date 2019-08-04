@@ -177,9 +177,9 @@ MonoBehaviour:
   spawnEnemies:
   - {fileID: 8279136884219903461, guid: bb8c511a53ded8349bc2a5814304b030, type: 3}
   spawnInterval: 5
-  playerScoreTarget: 1000
-  playerScoreIntervals: 1000
-  player: {fileID: 0}
+  playerScoreTarget: 300
+  playerScoreIntervals: 500
+  player: {fileID: 775223176}
 --- !u!1 &207903562
 GameObject:
   m_ObjectHideFlags: 0
@@ -2558,11 +2558,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: 3682856866623688780, guid: 0b26a77e5f4515a439c5096bdc764175,
-        type: 3}
-      propertyPath: RestartScreen.Array.size
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3682856866623688780, guid: 0b26a77e5f4515a439c5096bdc764175,
         type: 3}

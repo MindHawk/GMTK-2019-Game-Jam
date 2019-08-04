@@ -885,10 +885,13 @@ MonoBehaviour:
   timeStartedSwitchingAt: 0
   switchDelay: 0.5
   score: 0
-  powerChargedPerSecond: 5
-  powerDrainedPerSystemPerSecond: 1.5
+  powerChargedPerSecond: 15
+  powerDrainedPerSystemPerSecond: 4
   _deathSound: {fileID: 8668636636180240908, guid: d317115773edab243b2333a892dba445,
     type: 3}
+  RestartScreen:
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &2406073907283223137
 MonoBehaviour:
   m_ObjectHideFlags: 0
