@@ -141,10 +141,26 @@ public class InputComponent : MonoBehaviour
         float horizontalAxis = Input.GetAxis("Horizontal");
         if (verticalAxis != 0 || horizontalAxis != 0)
         {
-            _move.Move(horizontalAxis, verticalAxis);
+            if (transform.position.x > 8.5f && horizontalAxis > 0)
+            {
+                horizontalAxis = 0;
+            }
+            if (transform.position.x < -8.5f && horizontalAxis < 0)
+            {
+                horizontalAxis = 0;
+            }
+            if (transform.position.y > 4.5f && verticalAxis > 0)
+            {
+                verticalAxis = 0;
+            }
+            if (transform.position.y < -4.5f && verticalAxis < 0)
+            {
+                verticalAxis = 0;
+            }
         }
-    }
-
+        _move.Move(horizontalAxis, verticalAxis);
+        }
+    
     void AttackAction()
     {
         if (Input.GetAxis("Fire1") > 0)
