@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class ShieldComponent : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public bool isActiveWeapon;
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        GetComponent<BoxCollider2D>().enabled = isActiveWeapon;
+        GetComponent<SpriteRenderer>().enabled = isActiveWeapon;
     }
 }
