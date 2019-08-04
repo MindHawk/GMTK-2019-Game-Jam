@@ -5,6 +5,7 @@ using UnityEngine;
 public class WeaponComponent : MonoBehaviour
 {
     [SerializeField] private GameObject _projectile;
+    [SerializeField] private AudioSource _shotSound;
 
     private float _lastFiredAt = 0;
     
@@ -39,6 +40,7 @@ public class WeaponComponent : MonoBehaviour
         {
             _lastFiredAt = Time.time;
             Instantiate(_projectile, transform);
+            _shotSound.Play();
         }
     }
 }
