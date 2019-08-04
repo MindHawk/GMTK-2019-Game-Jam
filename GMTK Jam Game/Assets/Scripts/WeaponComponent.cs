@@ -15,7 +15,10 @@ public class WeaponComponent : MonoBehaviour
 
     void Start()
     {
-
+        if (!isPlayerWeapon)
+        {
+            delayBetweenShots *= Random.Range(0.4f, 1.6f);
+        }
     }
 
     void Update()

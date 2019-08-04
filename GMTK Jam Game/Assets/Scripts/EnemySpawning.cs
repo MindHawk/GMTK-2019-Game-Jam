@@ -34,6 +34,7 @@ public class EnemySpawning : MonoBehaviour
         GameObject spawnpoint = spawnPoints[Random.Range(0, spawnPoints.Count - 1)];
         GameObject spawnEnemy = spawnEnemies[Random.Range(0, spawnEnemies.Count - 1)];
 
-        Instantiate(spawnEnemy, spawnpoint.transform);
+        GameObject enemy = Instantiate(spawnEnemy, spawnpoint.transform);
+        enemy.transform.position += new Vector3(Random.Range(-1f, 1f), 0);
     }
 }
