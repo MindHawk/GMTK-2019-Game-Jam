@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class ProjectileController : MonoBehaviour
 {
-    [SerializeField] float _lifeTime;
-    [SerializeField] float _speed;
+    [SerializeField] float lifeTime;
+    [SerializeField] float speed;
     public bool isEnemyBullet;
     void Start()
     {
@@ -17,12 +17,15 @@ public class ProjectileController : MonoBehaviour
     void Update()
     {
         var trans = transform;
-        trans.position += trans.rotation * (Time.deltaTime * _speed * Vector3.up);
-        if(_lifeTime > 0)
+        trans.position += trans.rotation * (Time.deltaTime * speed * Vector3.up);
+        lifeTime -= Time.deltaTime;
+        
+        if (lifeTime <= 0)
         {
-            _lifeTime -= Time.deltaTime;
+            Destroy(gameObject);
         }
-        else if (_lifeTime <= 0)
+        
+        if (Math.Abs(transform.position.x) > 11 || Math.Abs(transform.position.y) > 7)
         {
             Destroy(gameObject);
         }
