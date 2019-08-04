@@ -9,7 +9,7 @@ public class AIComponent : MonoBehaviour
     private WeaponComponent _weapon;
     [SerializeField] private int _health = 3;
     [SerializeField] private int _scoreValue = 100;
-    [SerializeField] private AudioSource _deathSound;
+    [SerializeField] private GameObject _deathSound;
 
     public AIType _aiType;
 
@@ -65,7 +65,11 @@ public class AIComponent : MonoBehaviour
     {
         if (_health <= 0)
         {
-            _deathSound.Play();
+            GameObject SoundEmitter = Instantiate(_deathSound, transform, true);
+            AudioSource audioSource = SoundEmitter.GetComponent<AudioSource>();
+            audioSource.Play();
+            SoundEmitter.transform.parent = null;
+
             PlayerComponent player = FindObjectOfType<PlayerComponent>();
             player.score += _scoreValue;
         }

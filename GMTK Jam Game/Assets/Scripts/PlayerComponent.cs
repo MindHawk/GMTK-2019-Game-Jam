@@ -16,6 +16,8 @@ public class PlayerComponent : MonoBehaviour
 
     public float powerChargedPerSecond = 5f;
     public float powerDrainedPerSystemPerSecond = 1.5f;
+
+    [SerializeField] private GameObject _deathSound;
     
     void Start()
     {
@@ -26,5 +28,13 @@ public class PlayerComponent : MonoBehaviour
 
     void Update()
     {
+    }
+
+    private void OnDestroy()
+    {
+        GameObject SoundEmitter = Instantiate(_deathSound, transform, true);
+        AudioSource audioSource = SoundEmitter.GetComponent<AudioSource>();
+        audioSource.Play();
+        SoundEmitter.transform.parent = null;
     }
 }
