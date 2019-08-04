@@ -18,6 +18,7 @@ public class PlayerComponent : MonoBehaviour
     public float powerDrainedPerSystemPerSecond = 1.5f;
 
     [SerializeField] private GameObject _deathSound;
+    [SerializeField] private List<GameObject> RestartScreen;
     
     void Start()
     {
@@ -32,6 +33,11 @@ public class PlayerComponent : MonoBehaviour
 
     private void OnDestroy()
     {
+        foreach (GameObject gameObject in RestartScreen)
+        {
+            gameObject.SetActive(true);
+        }
+
         GameObject SoundEmitter = Instantiate(_deathSound, transform, true);
         AudioSource audioSource = SoundEmitter.GetComponent<AudioSource>();
         audioSource.Play();
