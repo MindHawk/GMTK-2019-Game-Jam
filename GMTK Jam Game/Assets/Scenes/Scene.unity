@@ -173,12 +173,11 @@ MonoBehaviour:
   - {fileID: 1914845059}
   - {fileID: 207903562}
   - {fileID: 770225669}
-  - {fileID: 1827756291}
   spawnEnemies:
   - {fileID: 8279136884219903461, guid: bb8c511a53ded8349bc2a5814304b030, type: 3}
-  spawnInterval: 5
-  playerScoreTarget: 300
-  playerScoreIntervals: 500
+  spawnInterval: 4
+  playerScoreTarget: 350
+  playerScoreIntervals: 350
   player: {fileID: 775223176}
 --- !u!1 &207903562
 GameObject:
@@ -2598,6 +2597,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 3682856866623688780, guid: 0b26a77e5f4515a439c5096bdc764175,
+        type: 3}
+      propertyPath: RestartScreen.Array.data[0]
+      value: 
+      objectReference: {fileID: 1393129736}
+    - target: {fileID: 3682856866623688780, guid: 0b26a77e5f4515a439c5096bdc764175,
+        type: 3}
+      propertyPath: RestartScreen.Array.data[1]
+      value: 
+      objectReference: {fileID: 1220585568}
     - target: {fileID: 8037657738111990462, guid: 0b26a77e5f4515a439c5096bdc764175,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2653,15 +2662,5 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
-    - target: {fileID: 3682856866623688780, guid: 0b26a77e5f4515a439c5096bdc764175,
-        type: 3}
-      propertyPath: RestartScreen.Array.data[0]
-      value: 
-      objectReference: {fileID: 1393129736}
-    - target: {fileID: 3682856866623688780, guid: 0b26a77e5f4515a439c5096bdc764175,
-        type: 3}
-      propertyPath: RestartScreen.Array.data[1]
-      value: 
-      objectReference: {fileID: 1220585568}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b26a77e5f4515a439c5096bdc764175, type: 3}

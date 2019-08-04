@@ -5,17 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class RestartSceneScript : MonoBehaviour
 {
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void Restart()
     {
         SceneManager.LoadScene("Scene");

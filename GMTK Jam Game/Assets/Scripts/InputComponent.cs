@@ -141,7 +141,7 @@ public class InputComponent : MonoBehaviour
         float horizontalAxis = Input.GetAxis("Horizontal");
         if (verticalAxis != 0 || horizontalAxis != 0)
         {
-            if (transform.position.x > 8.5f && horizontalAxis > 0)
+            if (transform.position.x > -1f && horizontalAxis > 0)
             {
                 horizontalAxis = 0;
             }

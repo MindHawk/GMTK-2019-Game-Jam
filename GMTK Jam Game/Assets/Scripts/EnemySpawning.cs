@@ -22,7 +22,7 @@ public class EnemySpawning : MonoBehaviour
     {
         if (player.score >= playerScoreTarget)
         {
-            spawnInterval -= 0.5f;
+            spawnInterval *= 0.85f;
             CancelInvoke();
             InvokeRepeating("SpawnEnemy", 1f, spawnInterval);
             playerScoreTarget += playerScoreIntervals;
