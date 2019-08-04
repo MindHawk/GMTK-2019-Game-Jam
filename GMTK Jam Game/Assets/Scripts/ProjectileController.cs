@@ -28,27 +28,29 @@ public class ProjectileController : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+
+    private void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log("Triggered");
         if (isEnemyBullet)
         {
             PlayerComponent player = other.GetComponent<PlayerComponent>();
             if (player != null)
-            { //We're firing on the enemy ship!
-                
+            {
+                Destroy(gameObject);
             }
 
             ShieldComponent shield = other.GetComponent<ShieldComponent>();
             if (shield != null)
-            { //We're firing on the enemy shield!
+            { 
+                Destroy(gameObject);
                 
             }
 
             ProjectileController projectile = other.GetComponent<ProjectileController>();
             if (projectile != null)
-            { //We've collided onto a projectile! 
-                //If it's an enemy projectile, destroy this?
+            { 
+                Destroy(gameObject);
             }
         }
         else
@@ -65,10 +67,5 @@ public class ProjectileController : MonoBehaviour
                 //If it's an enemy projectile, destroy this?
             }
         }
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        Debug.Log("Collided");
     }
 }
