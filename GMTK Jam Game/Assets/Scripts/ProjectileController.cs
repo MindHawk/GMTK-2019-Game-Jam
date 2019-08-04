@@ -7,6 +7,7 @@ public class ProjectileController : MonoBehaviour
 {
     [SerializeField] float lifeTime;
     [SerializeField] float speed;
+    [SerializeField] int damage = 1;
     public bool isEnemyBullet;
     void Start()
     {
@@ -34,13 +35,13 @@ public class ProjectileController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Triggered");
         if (isEnemyBullet)
         {
             PlayerComponent player = other.GetComponent<PlayerComponent>();
             if (player != null)
             {
                 Destroy(gameObject);
+                Destroy(other.gameObject);
             }
 
             ShieldComponent shield = other.GetComponent<ShieldComponent>();
@@ -61,7 +62,9 @@ public class ProjectileController : MonoBehaviour
             AIComponent AIShip = other.GetComponent<AIComponent>();
             if (AIShip != null)
             { //We've hit an enemy vessel!
-                
+                Debug.Log("Hit");
+                AIShip.TakeDamage(damage);
+                Destroy(gameObject);
             }
             
             ProjectileController projectile = other.GetComponent<ProjectileController>();

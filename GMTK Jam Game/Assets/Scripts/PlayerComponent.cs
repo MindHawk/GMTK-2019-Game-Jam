@@ -12,6 +12,7 @@ public class PlayerComponent : MonoBehaviour
     public Action switchingToAction;
     public float timeStartedSwitchingAt;
     public float switchDelay = 0.5f;
+    public int score;
 
     public float powerChargedPerSecond = 5f;
     public float powerDrainedPerSystemPerSecond = 1.5f;
@@ -20,6 +21,7 @@ public class PlayerComponent : MonoBehaviour
     {
         currentAction = Action.Moving;
         power = maximumPower;
+        score = 0;
     }
 
     void Update()

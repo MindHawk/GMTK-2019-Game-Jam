@@ -7,6 +7,8 @@ public class AIComponent : MonoBehaviour
 {
     private MovementComponent _move;
     private WeaponComponent _weapon;
+    [SerializeField] private int _health = 3;
+    [SerializeField] private int _scoreValue = 100;
 
     public AIType _aiType;
     
@@ -37,6 +39,25 @@ public class AIComponent : MonoBehaviour
         if (Math.Abs(transform.position.x) > 11 || Math.Abs(transform.position.y) > 7)
         {
             Destroy(gameObject);
+        }
+
+        if (_health <= 0)
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    public void TakeDamage (int damageAmount)
+    {
+        _health -= damageAmount;
+    }
+
+    private void OnDestroy()
+    {
+        if (_health <= 0)
+        {
+            PlayerComponent player = FindObjectOfType<PlayerComponent>();
+            player.score += _scoreValue;
         }
     }
 }
